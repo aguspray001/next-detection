@@ -46,7 +46,8 @@ export default function Home() {
   };
 
   const runModel = async () => {
-    const net = await cocossd.load();
+    // const net = await cocossd.load();
+    const net = await tf.loadLayersModel('file://model_tfjs/model.json').then(r=>r).catch(e=>e)
     setInterval(() => {
       detect(net);
     }, 20);

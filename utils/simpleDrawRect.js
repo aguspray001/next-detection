@@ -6,6 +6,7 @@ export const simpleDrawRect = (detections, ctx) => {
         // styiling
         const color = '#' + Math.floor(Math.random()*167777215).toString(16)
         ctx.strokeStyle = color;
+        ctx.lineWidth = '4'
         ctx.font = '18px Arial';
         ctx.fillStyle = color;
 
